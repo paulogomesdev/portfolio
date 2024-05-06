@@ -16,6 +16,3 @@
 =======
 ## Contribuições
 [![Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=paulogomesdev&repo=dio-lab-open-source&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF)](https://github.com/paulogomesdev/dio-lab-open-source)
-
-
->>>>>>> e3087e2b7b5b542694dd7e893e3c7d8cef9a7d8c
