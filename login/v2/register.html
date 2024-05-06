@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+</head>
+<body>
+    <section>
+        <div>
+            <i id="img-error" class="fa-solid fa-key"></i>
+        </div>
+        <div id="msg-error">Aguardando informações...</div>
+        <div>
+            <div>
+                <input type="text" id="input-user" placeholder="Username">
+            </div>
+            <div>
+                <input type="text" id="input-email" placeholder="E-mail">
+            </div>
+            <div>
+                <input type="password" id="input-pass" placeholder="Password">
+            </div>
+            <div>
+                <button id="button-access" onclick="register()" onmouseover="color1()" onmouseleave="color2()">Cadastrar</button>
+            </div>
+            <div id="register-link">Já possui uma conta?
+                <br>
+                <a href="main.html">Autentique-se</a>
+            </div>
+        </div>
+    </section>
+    <footer>&copy; Paulo Gomes</footer>
+    <script src="scripts/register.js"></script>
+</body>
+</html>
