@@ -2,16 +2,16 @@ let username = 'Paulo'
 let password = 'x45b150z'
 
 function login() {
-    let userV = document.getElementById('input-user')
-    let passV = document.getElementById('input-pass')
+    let user = document.getElementById('input-user')
+    let pass = document.getElementById('input-pass')
     let msg = document.getElementById('msg-error')
     let img = document.getElementById('img-error')
-    if (userV.value.length == 0 || passV.value.length == 0) {
+    if (user.value.length == 0 || pass.value.length == 0) {
         msg.innerHTML = `Preencha todos os campos!`
         img.style.color = '#ffbe4d'
-    } else if (userV.value == username && passV.value == password) {
+    } else if (user.value == username && pass.value == password) {
         msg.innerHTML = `Logado com sucesso!`
-        img.style.color = ' '
+        img.style.color = '#39d47c'
     } else {
         msg.innerHTML = `Usuário ou senha incorretos!`
         img.style.color = '#ff4d53'
