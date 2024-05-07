@@ -1,5 +1,5 @@
 let username = 'Paulo'
-let password = 'x45b150z'
+let password = '123456@'
 
 function login() {
     let user = document.getElementById('input-user')
