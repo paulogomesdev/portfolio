@@ -1,6 +1,6 @@
 function login() {
     let username = 'Paulo'
-    let password = '123456@'
+    let password = '123456'
     let userV = document.getElementById('input-user')
     let passV = document.getElementById('input-pass')
     let msg = document.getElementById('msg')
