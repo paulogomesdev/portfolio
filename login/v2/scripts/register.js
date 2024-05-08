@@ -1,6 +1,6 @@
 let username = 'Paulo'
 let email = 'jaccoller@gmail.com'
-let password = '123456@'
+let password = '123456'
 
 function register() {
     let newuser = document.getElementById('input-user')
