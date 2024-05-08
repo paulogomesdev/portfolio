@@ -19,13 +19,3 @@ function register() {
         img.style.color = '#39d47c'
     }
 }
-
-function color1() {
-    let button = document.getElementById('button-access')
-    button.style.backgroundColor = '#39d47c'
-}
-
-function color2() {
-    let button = document.getElementById('button-access')
-    button.style.backgroundColor = '#1e996a'
-}

@@ -76,6 +76,11 @@ input {
     border-radius: 100px;
     cursor: pointer;
     font-size: 11pt;
+    transition: all 0.2s;
+}
+
+#button-access:hover {
+    background-color: #1e996a;
 }
 
 #register-link {

@@ -17,13 +17,3 @@ function login() {
         img.style.color = '#ff4d53'
     }
 }
-
-function color1() {
-    let button = document.getElementById('button-access')
-    button.style.backgroundColor = '#39d47c'
-}
-
-function color2() {
-    let button = document.getElementById('button-access')
-    button.style.backgroundColor = '#1e996a'
-}
