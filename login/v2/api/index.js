@@ -20,7 +20,7 @@ const jwt = require('jsonwebtoken');
 
 
 const users = [
-    { id: 1, username: 'paulo', password: '123456', email: 'jaccoller@gmai' }
+    { id: 1, username: 'paulo', password: '123456', email: 'jaccoller@gmail.com' }
 ];
 
 app.post('/login', (req, res) => {
