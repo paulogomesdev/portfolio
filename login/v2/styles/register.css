@@ -9,7 +9,7 @@ body {
 section {
     background-color: #fff;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 6%;
     width: 350px;
     height: 380px;
     padding: 15px;
@@ -19,13 +19,14 @@ section {
 
 /* Header */
 
-#img-error {
+#imgKey {
     font-size: 40pt;
     margin-bottom: 25px;
     color: #00000050;
+    transition: all 0.2s;
 }
 
-#msg-error {
+#msgReturn {
     font-size: 10pt;
     margin-top: 10px;
 }
@@ -38,7 +39,7 @@ input {
     width: 248px;
 }
 
-#input-user {
+#usernameInput {
     margin: 15px;
     border: none;
     background-color: rgb(33, 40, 43);
@@ -47,16 +48,16 @@ input {
     border-radius: 100px;
 }
 
-#input-email {
+#passwordInput {
     border: none;
     background-color: rgb(33, 40, 43);
     color: #fff;
     padding: 10px;
     border-radius: 100px;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-#input-pass {
+#emailInput {
     border: none;
     background-color: rgb(33, 40, 43);
     color: #fff;
@@ -66,12 +67,12 @@ input {
 
 /* Buttons */
 
-#button-access {
+#loginButton {
     color: #fff;
     width: 264px;
     height: 40px;
     margin: 15px;
-    background-color: #1e996a;
+    background-color: #eba431;
     border: none;
     border-radius: 100px;
     cursor: pointer;
@@ -79,11 +80,11 @@ input {
     transition: all 0.2s;
 }
 
-#button-access:hover {
-    background-color: #1e996a;
+#loginButton:hover {
+    background-color: #fabd5c;
 }
 
-#register-link {
+#goToLogin {
     font-size: 10pt;
     margin-top: 10px;
     line-height: 18px;

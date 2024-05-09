@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+}));
 
 app.use(express.json());
 
@@ -10,11 +15,12 @@ app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
+
 const jwt = require('jsonwebtoken');
 
 
 const users = [
-    { id: 1, username: 'paulo', password: '123456' }
+    { id: 1, username: 'paulo', password: '123456', email: 'jaccoller@gmai' }
 ];
 
 app.post('/login', (req, res) => {
@@ -22,18 +28,25 @@ app.post('/login', (req, res) => {
 
     const user = users.find(u => u.username === username && u.password === password);
     if (user) {
-        const token = jwt.sign({ id: user.id }, 'secreto', { expiresIn: '1h' });
-        res.json({ token });
+        // Verifica se o usuário e a senha correspondem
+        if (user.username === username && user.password === password) {
+            const token = jwt.sign({ id: user.id }, 'secreto', { expiresIn: '1h' });
+            res.json({ token });
+        } else {
+            res.status(401).json({ message: 'Credenciais inválidas' });
+        }
     } else {
         res.status(401).json({ message: 'Credenciais inválidas' });
     }
 });
 
 app.post('/register', (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, email } = req.body;
 
-    users.push({username, password});
-    res.send('Usuario criado!');
+    const newUser = { id: users.length + 1, username, password, email };
+    users.push(newUser);
+
+    res.status(201).json({ message: 'Usuário criado com sucesso!', user: newUser });
 });
 
 app.post('/logout', (req, res) => {

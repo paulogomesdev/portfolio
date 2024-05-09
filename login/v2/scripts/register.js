@@ -1,21 +1,40 @@
-let username = 'Paulo'
-let email = 'jaccoller@gmail.com'
-let password = '123456'
+document.getElementById('loginButton').addEventListener('click', async () => {
+    // Pegando os valores dos inputs
+    const username = document.getElementById('usernameInput').value;
+    const password = document.getElementById('passwordInput').value;
+    const email = document.getElementById('emailInput').value;
+    let img = document.getElementById('imgKey')
+    let msg = document.getElementById('msgReturn');
 
-function register() {
-    let newuser = document.getElementById('input-user')
-    let newemail = document.getElementById('input-email')
-    let newpass = document.getElementById('input-pass')
-    let msg = document.getElementById('msg-error')
-    let img = document.getElementById('img-error')
-    if (newuser.value.length, newemail.value.length, newpass.value.length == 0) {
+    if (!username || !email || !password) {
         msg.innerHTML = `Preencha todos os campos!`
         img.style.color = '#ffbe4d'
-    } else if (newuser.value == username || newemail.value == email || newpass == password) {
-        msg.innerHTML = `Conta existente!`
-        img.style.color = '#ff4d53'
-    } else {
-        msg.innerHTML = `Cadastrado com sucesso!`
-        img.style.color = '#39d47c'
+        return; // Retorna para evitar o envio da requisição
     }
-}
+
+    try {
+        const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const token = data.token;
+            console.log('Token:', token);
+            msg.innerHTML = `Cadastrado com sucesso!`
+            img.style.color = '#39d47c'
+            // Faça algo com o token, como armazená-lo localmente
+        } else {
+            const errorMessage = await response.text();
+            console.error('Erro:', errorMessage);
+            msg.innerHTML = `Conta existente!`
+            img.style.color = '#ff4d53'
+        }
+    } catch (error) {
+        console.error('Ocorreu um erro ao chamar a API:', error);
+    }
+});

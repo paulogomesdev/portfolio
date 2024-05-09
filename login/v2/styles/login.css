@@ -9,7 +9,7 @@ body {
 section {
     background-color: #fff;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 7%;
     width: 350px;
     height: 330px;
     padding: 15px;
@@ -19,13 +19,14 @@ section {
 
 /* Header */
 
-#img-error {
+#imgKey {
     font-size: 40pt;
     margin-bottom: 25px;
     color: #00000050;
+    transition: all 0.2s;
 }
 
-#msg-error {
+#msgReturn {
     font-size: 10pt;
     margin-top: 10px;
 }
@@ -38,7 +39,7 @@ input {
     width: 248px;
 }
 
-#input-user {
+#usernameInput {
     margin: 15px;
     border: none;
     background-color: rgb(33, 40, 43);
@@ -47,7 +48,7 @@ input {
     border-radius: 100px;
 }
 
-#input-pass {
+#passwordInput {
     border: none;
     background-color: rgb(33, 40, 43);
     color: #fff;
@@ -57,7 +58,7 @@ input {
 
 /* Buttons */
 
-#button-access {
+#loginButton {
     color: #fff;
     width: 264px;
     height: 40px;
@@ -70,11 +71,11 @@ input {
     transition: all 0.2s;
 }
 
-#button-access:hover {
+#loginButton:hover {
     background-color: #39d47c;
 }
 
-#register-link {
+#goToRegister {
     font-size: 10pt;
     margin-top: 10px;
     line-height: 18px;
