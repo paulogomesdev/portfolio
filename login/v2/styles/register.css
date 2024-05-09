@@ -67,7 +67,7 @@ input {
 
 /* Buttons */
 
-#loginButton {
+#registerButton {
     color: #fff;
     width: 264px;
     height: 40px;
@@ -80,7 +80,7 @@ input {
     transition: all 0.2s;
 }
 
-#loginButton:hover {
+#registerButton:hover {
     background-color: #fabd5c;
 }
 

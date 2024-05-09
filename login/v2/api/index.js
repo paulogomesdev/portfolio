@@ -43,6 +43,13 @@ app.post('/login', (req, res) => {
 app.post('/register', (req, res) => {
     const { username, password, email } = req.body;
 
+    // Verifica se já existe um usuário com o mesmo nome de usuário ou email
+    const existingUser = users.find(user => user.username === username || user.email === email);
+
+    if (existingUser) {
+        return res.status(400).json({ message: 'Usuário já cadastrado com esse nome de usuário ou email.' });
+    }
+
     const newUser = { id: users.length + 1, username, password, email };
     users.push(newUser);
 

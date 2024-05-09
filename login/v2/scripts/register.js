@@ -1,4 +1,4 @@
-document.getElementById('loginButton').addEventListener('click', async () => {
+document.getElementById('registerButton').addEventListener('click', async () => {
     // Pegando os valores dos inputs
     const username = document.getElementById('usernameInput').value;
     const password = document.getElementById('passwordInput').value;
@@ -18,7 +18,7 @@ document.getElementById('loginButton').addEventListener('click', async () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({ username, email, password })
         });
 
         if (response.ok) {
